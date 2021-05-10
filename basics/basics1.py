@@ -179,3 +179,16 @@ def bubble_sort(item_list):
 
 item_list=[89,2,1,67,11,5]
 items=bubble_sort(item_list)
+
+
+################################## removing duplicates ############################
+
+def rem_dup(list1):
+    rset=set()
+    for item in list1:
+        if item not in rset:
+            yield item
+            rset.add(item)
+            
+a=[1,2,2,3,3,3,4,4,4,4,5,5,5,5,5]
+print(list(rem_dup(a)))
