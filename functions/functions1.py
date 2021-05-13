@@ -7,7 +7,26 @@ Created on Fri May  7 17:02:47 2021
 
 ######## functions #########
 
-def function1():
+def helloworld():
     print("Hello world")
     
-function1()
+helloworld()
+
+
+###############
+
+def avg(first,*rest):
+    return(first+sum(rest))/(1+len(rest))
+
+avg(1,3,4,58,2,45)
+
+
+###########################
+
+def multiple_args(*args,**kwargs):
+    print(args)
+    for arg in args:
+        print(arg)
+    print(kwargs)
+    
+multiple_args('item','class','id','span',width='width',height='height')
