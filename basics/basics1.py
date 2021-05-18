@@ -42,6 +42,7 @@ day
 
 data[0]="Acme"
 
+
 _,count,shares,_=data
 print(shares)
 
@@ -117,9 +118,11 @@ portfolio = [
 {'name': 'YHOO', 'shares': 45, 'price': 16.35},
 {'name': 'ACME', 'shares': 75, 'price': 115.65}
 ]
-cheap = heapq.nsmallest(3, portfolio, key=lambda s: s['price'])
-expensive = heapq.nlargest(3, portfolio, key=lambda s: s['price'])
+cheap = heapq.nsmallest(3, portfolio, key=lambda a: a['price'])
+expensive = heapq.nlargest(3, portfolio, key=lambda a: a['price'])
 
+cheap_share= heapq.nsmallest(4, portfolio, key=lambda a: a['shares'])
+expensive_share = heapq.nlargest(4, portfolio, key=lambda a: a['shares'])
 
 
 ################## finding common in dictonaries ####################
@@ -172,9 +175,12 @@ def bubble_sort(item_list):
     for item in range (len(item_list)-1,0,-1):
         for idx in range(item):
             if item_list[idx]>item_list[idx+1]:
+                print(item_list[idx])
+                print(item_list[idx+1])
                 temp=item_list[idx]
                 item_list[idx]=item_list[idx+1]
                 item_list[idx+1]=temp
+                print(temp)
     return item_list
 
 item_list=[89,2,1,67,11,5]
