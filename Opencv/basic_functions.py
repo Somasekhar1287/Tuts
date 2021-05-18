@@ -47,7 +47,7 @@ try:
     
         def resize():
             #### resize 
-            resize=cv.resize(img,(500,500))
+            resize=cv.resize(img,(500,500),interpolation=cv.INTER_CUBIC)
             cv.imshow("resize",resize)
         def crop():
             ### cropping
