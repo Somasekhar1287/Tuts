@@ -12,7 +12,11 @@ def helloworld():
     
 helloworld()
 
-
+def hello(greet="Hello"):
+    print(greet)
+    
+hello()
+hello("Hello Sanju ! ")
 ###############
 
 def avg(first,*rest):
@@ -20,11 +24,20 @@ def avg(first,*rest):
 
 avg(1,3,4,58,2,45)
 
+##################  multiple return values
 
+def mult_ret(a,b,c):
+    a=a*2
+    b=b*3
+    c=c*4
+    return a,b,c
+
+values=mult_ret(1,2,3)
+print(values)
+print(values[0])
 ###########################
 
 def multiple_args(*args,**kwargs):
-    print(args)
     for arg in args:
         print(arg)
     print(kwargs)

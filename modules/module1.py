@@ -17,6 +17,7 @@ for i in li:
     
 
 sq_area=area.square_area(5)
+sq_area=area.square_area()
 print("Square area is : ",sq_area)
 
 print(rect_area(5,6))
