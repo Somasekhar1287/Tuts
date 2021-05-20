@@ -13,7 +13,7 @@ try:
        dims=(width,height)
        return cv.resize(frame,dims,interpolation=cv.INTER_AREA)
     
-    img=cv.imread("C://Users//eagle//OneDrive//Documents//python//Opencv//images//adorable-cat.jpg")
+    img=cv.imread("C://Users//eagle//OneDrive//Documents//git//python//Tuts//Tuts//Opencv//images//adorable-cat.jpg")
     
     r_img=rescale(img)
     cv.imshow("img",r_img)
