@@ -19,3 +19,9 @@ def square_area(a=1):
     else:
         return a*a
     
+def greet(s="hai"):
+    print(s)
+    
+    
+
+__all__=['rect_area','square_area']
