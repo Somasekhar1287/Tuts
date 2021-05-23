@@ -25,6 +25,50 @@ try:
     translated=translate(img,100,100)
     cv.imshow("translated",translated)
     
+    def rotation(img,angle,rotPoint=None):
+        (height,width)=img.shape[:2]
+        
+        if rotPoint is None:
+            rotPoint=(width//2,height//2)
+            
+        rotMat=cv.getRotationMatrix2D(rotPoint,angle,1.0)
+        dimensions=(width,height)
+        
+        return cv.warpAffine(img,rotMat,dimensions)
+    
+    rotated=rotation(img,45)
+    cv.imshow("rotation",rotated)
+    
+    rotated1=rotation(img,-45)
+    cv.imshow("rotation reverse",rotated1)
+    
+    ### rotating the rotated image
+    rot2=rotation(rotated,45)
+    cv.imshow("double rot",rot2)
+    
+    
+    # resize 
+    resized_sink=cv.resize(img,(500,500),interpolation=cv.INTER_AREA)
+    resized_linear=cv.resize(img,(1280,1024 ),interpolation=cv.INTER_LINEAR)
+    resized_cubic=cv.resize(img,(500,500),interpolation=cv.INTER_CUBIC)
+    
+    #cv.imshow("sink",resized_sink)
+    #cv.imshow("linear",resized_linear)
+    cv.imshow("cubic",resized_cubic)
+    
+    
+    ### flip vertical
+    flip=cv.flip(img,0)
+    cv.imshow("flip",flip)
+    
+    ### flip horizontally
+    flip2=cv.flip(img,1)
+    cv.imshow("flip2",flip2)
+    
+    ## flip both
+    flip3=cv.flip(img,-1)
+    cv.imshow("flip3",flip3)
+    
     cv.waitKey(0)
     
 except Exception as e:
