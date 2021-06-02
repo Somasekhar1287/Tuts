@@ -7,20 +7,13 @@ Created on Sat May 22 23:47:30 2021
 
 class example():
    
-    def disp(msg):
-        msg="Hello "+msg
-        print(msg)
-    def ret_disp(msg):
-        return msg
-        
+    def disp():
+        msg1="Hello "
+        print(msg1)
+    
+     
+example().disp()    
 
-class example1():
-    m="hello"
-    def disp(msg):
-        msg=m+msg
-        print(msg)
-    def ret_disp():
-        return msg
 
 
 
@@ -30,7 +23,7 @@ class student():
         self.name=name
         self.age=age
     def student_print(self):
-        print("Name is: ",self.name.title()," Age is: ",self.age)
+        print("Name is: ",self.name," Age is: ",self.age)
         
         
 student("soma",33).student_print()

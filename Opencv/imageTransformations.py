@@ -51,10 +51,12 @@ try:
     resized_sink=cv.resize(img,(500,500),interpolation=cv.INTER_AREA)
     resized_linear=cv.resize(img,(1280,1024 ),interpolation=cv.INTER_LINEAR)
     resized_cubic=cv.resize(img,(500,500),interpolation=cv.INTER_CUBIC)
+    resized_cubic2=cv.resize(img,(1920,1080),interpolation=cv.INTER_CUBIC)
     
     #cv.imshow("sink",resized_sink)
     #cv.imshow("linear",resized_linear)
-    cv.imshow("cubic",resized_cubic)
+    #cv.imshow("cubic",resized_cubic)
+    cv.imshow("cubic",resized_cubic2)
     
     
     ### flip vertical

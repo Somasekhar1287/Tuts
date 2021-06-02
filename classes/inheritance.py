@@ -15,6 +15,10 @@ class car():
     
     def get_car(self):
         return (self.model,"",self.year)
+    
+    
+    
+    
 
 class sub_car(car):
     def __init__(self,model,year):
@@ -41,7 +45,7 @@ class sub_car(car):
         self.mode="battery"
         
     def sproperty(self):
-        print("this is car mode"+self.mode)
+        print("this is car mode is : "+self.mode)
         
         
 scar=sub_car("electric",2020)
