@@ -6,9 +6,9 @@ Created on Tue May 18 18:03:07 2021
 """
 
 import cv2 as cv
-
+import openimage
 try:
-    img=cv.imread("C://Users//eagle//OneDrive//Documents//git//python//Tuts//Tuts//Opencv//images//adorable-cat.jpg")
+    img=openimage.open_image("C://Users//eagle//OneDrive//Documents//git//python//Tuts//Tuts//Opencv//images//adorable-cat.jpg")
     cv.imshow("cat",img)
     
     class effects():

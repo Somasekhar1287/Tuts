@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+0# -*- coding: utf-8 -*-
 """
 Created on Tue Jun  1 15:29:06 2021
 
@@ -112,6 +112,6 @@ y_classes=[np.argmax(element) for element in y_pred]
 print(y_classes[:20])
 print(Y_test[:20])
 
-plot_sample(X_test,Y_test,25)
+plot_sample(X_test,Y_test,2)
 
-print(categories[y_classes[25]])
+print(categories[y_classes[2]])
